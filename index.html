@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>What's Your 98125 Home Worth? | Adrian Willanger</title>
+<meta name="description" content="A personalized, data-driven home value report for Lake City, Victory Heights, Cedar Park, Matthews Beach, Meadowbrook, Olympic Hills, Jackson Park, and Pinehurst." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============== BRAND BANNER ============== -->
+<div class="brand-banner">
+  <img src="banner.jpg" alt="Small Trends. Big Impacts. Local Expertise." />
+</div>
+
+<!-- ============== STICKY TOP BAR ============== -->
+<header class="topbar" id="topbar">
+  <div class="container topbar-inner">
+    <a href="#top" class="brand">
+      <img class="brand-logo" src="awlogo.jpg" alt="Adrian Willanger" />
+      <span class="brand-text">
+        <strong>Adrian Willanger</strong>
+        <em>98125 Specialist · Kelly Right Real Estate</em>
+      </span>
+    </a>
+    <nav class="topnav">
+      <a href="#analyzer">Analyzer</a>
+      <a href="#market">Market</a>
+      <a href="#about">About Adrian</a>
+      <a href="#report" class="btn btn-primary btn-sm">Get My Home Value</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============== 1. HERO ============== -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">NE Seattle · ZIP 98125</span>
+      <h1>What's Your 98125 Home Worth <span class="accent">Right Now?</span></h1>
+      <p class="lede">
+        Get a personalized, data-driven home value report based on real sales
+        across all eight 98125 micro-neighborhoods — Lake City, Victory Heights,
+        Cedar Park, Matthews Beach, Meadowbrook, Olympic Hills, Jackson Park, and Pinehurst.
+      </p>
+      <div class="hero-cta">
+        <a href="#analyzer" class="btn btn-primary btn-lg">Find My Home Type</a>
+        <a href="#report" class="btn-text">Skip to home value →</a>
+      </div>
+      <div class="hero-trust">
+        <div><strong>30+ yrs</strong><span>Seattle metro</span></div>
+        <div><strong>8 areas</strong><span>covered in 98125</span></div>
+        <div><strong>★ 4.9</strong><span>client reviews</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card">
+        <div class="hero-card-head">
+          <span class="dot live"></span> LIVE · 98125 Market Pulse
+        </div>
+        <div class="hero-card-stats">
+          <div><em>Median Sale</em><strong>$815K</strong></div>
+          <div><em>Days on Market</em><strong>14</strong></div>
+          <div><em>Sale-to-List</em><strong>101.3%</strong></div>
+        </div>
+        <svg class="spark" viewBox="0 0 200 60" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3a8dbf"/>
+              <stop offset="100%" stop-color="#3a8dbf" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M0,45 L20,40 L40,42 L60,30 L80,32 L100,22 L120,28 L140,18 L160,22 L180,12 L200,15"
+                fill="none" stroke="#3a8dbf" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M0,45 L20,40 L40,42 L60,30 L80,32 L100,22 L120,28 L140,18 L160,22 L180,12 L200,15 L200,60 L0,60 Z"
+                fill="url(#grad)" opacity="0.55"/>
+        </svg>
+        <span class="hero-card-foot">3-yr trend · +4.2%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 2. INTERACTIVE ANALYZER ============== -->
+<section class="section" id="analyzer">
+  <div class="container">
+
+    <!-- STEP 1: STYLE -->
+    <div class="section-head">
+      <span class="eyebrow">Step 1 · Pick your home style</span>
+      <h2>NE Seattle is older housing stock — style matters as much as ZIP.</h2>
+      <p>From 1940s ramblers to new contemporary infill, each style behaves differently in 98125. Pick yours to start.</p>
+    </div>
+    <div class="type-grid" id="type-grid">
+      <button class="type-tile" data-type="rambler"><span>🏠</span>Rambler</button>
+      <button class="type-tile" data-type="onestory-bsmt"><span>🏚️</span>1-Story w/ Basement</button>
+      <button class="type-tile" data-type="split"><span>🏡</span>Split-Level</button>
+      <button class="type-tile" data-type="twostory"><span>🏘️</span>Two-Story Traditional</button>
+      <button class="type-tile" data-type="contemporary"><span>🔷</span>Contemporary</button>
+      <button class="type-tile" data-type="townhome"><span>🏬</span>Townhome</button>
+      <button class="type-tile" data-type="condo"><span>🏢</span>Condo</button>
+      <button class="type-tile" data-type="new"><span>✨</span>New Construction</button>
+    </div>
+    <div class="age-row">
+      <span class="age-label">Approx. year built (optional):</span>
+      <div class="age-chips" id="age-chips">
+        <button class="age-chip" data-age="pre1940">Pre-1940</button>
+        <button class="age-chip" data-age="1940-59">1940–1959</button>
+        <button class="age-chip" data-age="1960-79">1960–1979</button>
+        <button class="age-chip" data-age="1980-99">1980–1999</button>
+        <button class="age-chip" data-age="2000+">2000+</button>
+      </div>
+    </div>
+
+    <!-- STEP 2: NEIGHBORHOOD -->
+    <div class="section-head" style="margin-top:3.5rem">
+      <span class="eyebrow">Step 2 · Pick your micro-neighborhood</span>
+      <h2>Eight micro-neighborhoods. Eight different markets.</h2>
+      <p>98125 isn't one market — it's eight. Tap your neighborhood to see what's happening on your street.</p>
+    </div>
+    <div class="tile-grid" id="nbhd-grid">
+      <button class="tile" data-nbhd="lake-city"><span class="tile-icon">🏙️</span><span class="tile-label">Lake City</span></button>
+      <button class="tile" data-nbhd="victory-heights"><span class="tile-icon">⛰️</span><span class="tile-label">Victory Heights</span></button>
+      <button class="tile" data-nbhd="cedar-park"><span class="tile-icon">🌲</span><span class="tile-label">Cedar Park</span></button>
+      <button class="tile" data-nbhd="matthews-beach"><span class="tile-icon">🌊</span><span class="tile-label">Matthews Beach</span></button>
+      <button class="tile" data-nbhd="meadowbrook"><span class="tile-icon">🌳</span><span class="tile-label">Meadowbrook</span></button>
+      <button class="tile" data-nbhd="olympic-hills"><span class="tile-icon">🏞️</span><span class="tile-label">Olympic Hills</span></button>
+      <button class="tile" data-nbhd="jackson-park"><span class="tile-icon">⛳</span><span class="tile-label">Jackson Park</span></button>
+      <button class="tile" data-nbhd="pinehurst"><span class="tile-icon">🌲</span><span class="tile-label">Pinehurst</span></button>
+    </div>
+
+    <!-- COMBO RESULT -->
+    <div class="combo-prompt" id="combo-prompt">
+      <span class="combo-pill" id="pill-style">⬚ pick a style</span>
+      <span class="combo-arrow">+</span>
+      <span class="combo-pill" id="pill-nbhd">⬚ pick a neighborhood</span>
+      <span class="combo-arrow">=</span>
+      <span class="combo-pill ready" id="pill-ready">your custom snapshot</span>
+    </div>
+
+    <div class="reveal-card combo-card" id="combo-card" hidden>
+      <div class="reveal-head">
+        <div>
+          <span class="combo-eyebrow" id="combo-eyebrow">Lake City · Rambler</span>
+          <h3 id="combo-title">Your 98125 Segment Snapshot</h3>
+        </div>
+        <span class="badge" id="combo-demand">Demand: High</span>
+      </div>
+
+      <div class="reveal-stats">
+        <div><em>Median Sale Price</em><strong id="combo-price">$795,000</strong></div>
+        <div><em>Avg Days on Market</em><strong id="combo-dom">12 days</strong></div>
+        <div><em>Sale-to-List</em><strong id="combo-stl">101.5%</strong></div>
+        <div><em>YoY Change</em><strong id="combo-yoy" class="up">+2.8%</strong></div>
+      </div>
+
+      <div class="combo-chart-wrap">
+        <h4>12-month median price trend · <span id="combo-chart-label">Lake City · Rambler</span></h4>
+        <svg viewBox="0 0 600 180" class="combo-chart" preserveAspectRatio="none" id="combo-svg">
+          <defs>
+            <linearGradient id="comboArea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1F8A70" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#1F8A70" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g class="grid">
+            <line x1="0" y1="40"  x2="600" y2="40"/>
+            <line x1="0" y1="90"  x2="600" y2="90"/>
+            <line x1="0" y1="140" x2="600" y2="140"/>
+          </g>
+          <path id="combo-area" d="" fill="url(#comboArea)"/>
+          <path id="combo-line" d="" fill="none" stroke="#1F8A70" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <g id="combo-dots"></g>
+        </svg>
+        <div class="chart-axis light">
+          <span>Jun</span><span>Aug</span><span>Oct</span><span>Dec</span><span>Feb</span><span>Apr</span><span>May</span>
+        </div>
+      </div>
+
+      <div class="combo-narrative" id="combo-narrative">
+        Pick a home style and a neighborhood above to generate your custom trend analysis.
+      </div>
+
+      <div class="reveal-sales">
+        <h4>Last 3 matching sales</h4>
+        <div class="sale-cards" id="combo-sales"></div>
+      </div>
+
+      <a href="#report" class="btn btn-primary">Get a full report for my home</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== 3. AUTHORITY ============== -->
+<section class="section section-alt" id="about">
+  <div class="container authority">
+    <div class="authority-photo">
+      <div class="photo-name">Adrian Willanger</div>
+      <div class="photo-frame">
+        <img src="adrian.jpg" alt="Adrian Willanger" class="photo-headshot"/>
+      </div>
+      <div class="photo-role">Broker · Kelly Right Real Estate</div>
+    </div>
+    <div class="authority-copy">
+      <span class="eyebrow">Your 98125 Real Estate Specialist</span>
+      <h2><img src="awlogo.jpg" alt="" class="inline-logo"/>Hyper-local data. Modern marketing. Tailored strategy.</h2>
+      <p>
+        I've helped homeowners across all eight 98125 micro-neighborhoods sell for top dollar
+        by combining hyper-local NWMLS data with modern marketing.
+        Your home isn't just a number — it deserves a tailored strategy.
+      </p>
+      <div class="badges">
+        <div class="badge-chip"><strong>30+</strong><span>Years in Seattle metro</span></div>
+        <div class="badge-chip"><strong>LEED AP</strong><span>Sustainability MBA</span></div>
+        <div class="badge-chip"><strong>★ 4.9</strong><span>Zillow &amp; Google</span></div>
+        <div class="badge-chip"><strong>140+</strong><span>Homes sold in 98125</span></div>
+      </div>
+      <p class="tagline">Small Trends. Big Impacts. <em>Local Expertise.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 4. MARKET SNAPSHOT ============== -->
+<section class="section section-dark" id="market">
+  <div class="container">
+    <div class="section-head light">
+      <span class="eyebrow">Static · Updated weekly</span>
+      <h2>98125 Market at a Glance</h2>
+      <p>The numbers behind your neighborhood — refreshed every Monday from NWMLS.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <em>Median Sale Price</em>
+        <strong>$815,000</strong>
+        <span class="trend up">▲ +2.1% YoY</span>
+      </div>
+      <div class="stat-card">
+        <em>Price / Sq Ft</em>
+        <strong>$512</strong>
+        <span class="trend up">▲ +1.4% YoY</span>
+      </div>
+      <div class="stat-card">
+        <em>Active Inventory</em>
+        <strong>87 homes</strong>
+        <span class="trend down">▼ -8% MoM</span>
+      </div>
+      <div class="stat-card">
+        <em>3-Year Trend</em>
+        <strong>+4.2%</strong>
+        <span class="trend up">▲ vs. 2023</span>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <h4>12-month median sale price · 98125 (all styles)</h4>
+      <svg viewBox="0 0 600 200" class="chart" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#E3B23C" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#E3B23C" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g class="grid">
+          <line x1="0" y1="50"  x2="600" y2="50"/>
+          <line x1="0" y1="100" x2="600" y2="100"/>
+          <line x1="0" y1="150" x2="600" y2="150"/>
+        </g>
+        <path d="M0,130 L50,125 L100,118 L150,110 L200,95 L250,100 L300,85 L350,78 L400,82 L450,70 L500,65 L550,58 L600,52"
+              fill="none" stroke="#E3B23C" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M0,130 L50,125 L100,118 L150,110 L200,95 L250,100 L300,85 L350,78 L400,82 L450,70 L500,65 L550,58 L600,52 L600,200 L0,200 Z"
+              fill="url(#area)"/>
+      </svg>
+      <div class="chart-axis">
+        <span>Jun</span><span>Aug</span><span>Oct</span><span>Dec</span><span>Feb</span><span>Apr</span><span>May</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 5. TIMELINE SLIDER ============== -->
+<section class="section" id="timeline">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Interactive · Where are you in your journey?</span>
+      <h2>When do you think you'd sell?</h2>
+      <p>Drag the slider. I'll tailor the next step to your timeline — no pressure.</p>
+    </div>
+    <div class="slider-wrap">
+      <input type="range" id="slider" min="0" max="3" step="1" value="3" />
+      <div class="slider-ticks">
+        <span data-i="0">0–3 mo</span>
+        <span data-i="1">3–6 mo</span>
+        <span data-i="2">6–12 mo</span>
+        <span data-i="3">Just curious</span>
+      </div>
+      <div class="slider-message" id="slider-msg">
+        <h3 id="slider-title">No rush — track your home's value over time.</h3>
+        <p id="slider-body">Here's a simple way to watch what your home is worth, without anyone calling you. Monthly email, takes 60 seconds to read.</p>
+        <a href="#report" class="btn btn-primary" id="slider-cta">Send me monthly updates</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 6. LEAD CAPTURE ============== -->
+<section class="section section-form" id="report">
+  <div class="container form-wrap">
+    <div class="form-copy">
+      <span class="eyebrow">Free · No obligation</span>
+      <h2>Get Your Personalized 98125 Home Value Report</h2>
+      <p>Delivered to your inbox in minutes — based on real NWMLS sales on your street, not generic Zestimate algorithms.</p>
+      <ul class="checks">
+        <li>✓ Three comparable sales within 0.5 mi</li>
+        <li>✓ Estimated value range (low / mid / high)</li>
+        <li>✓ Best month to list, based on 98125 data</li>
+        <li>✓ A short note from Adrian — no spam, no calls unless you ask</li>
+      </ul>
+    </div>
+    <form class="form-card" id="lead-form" onsubmit="event.preventDefault(); document.getElementById('lead-form').hidden=true; document.getElementById('thanks').hidden=false;">
+      <div class="field">
+        <label>Property address</label>
+        <input type="text" placeholder="e.g. 12345 30th Ave NE, Seattle, WA 98125" required>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Your name</label>
+          <input type="text" placeholder="Jane Homeowner" required>
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" placeholder="jane@example.com" required>
+        </div>
+      </div>
+      <div class="field">
+        <label>Phone <span class="optional">(optional)</span></label>
+        <input type="tel" placeholder="(206) 555-0123">
+      </div>
+      <input type="hidden" id="tag-nbhd"   value="">
+      <input type="hidden" id="tag-type"   value="">
+      <input type="hidden" id="tag-age"    value="">
+      <input type="hidden" id="tag-time"   value="">
+      <input type="hidden" id="tag-entry"  value="hero">
+      <div class="form-tags" id="form-tags"></div>
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Send My Report</button>
+      <p class="fineprint">We respect your inbox. Unsubscribe anytime. Powered by NWMLS data.</p>
+    </form>
+    <div class="form-card thanks" id="thanks" hidden>
+      <div class="thanks-mark">✓</div>
+      <h3>Report on the way.</h3>
+      <p>Adrian will send your custom 98125 report within the next few minutes. Check your inbox — and feel free to reply directly with any questions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <h3 class="footer-name">Adrian Willanger <span class="sep">|</span> Broker</h3>
+      <p>Kelly Right Real Estate</p>
+      <p class="muted">Washington – Idaho · 30+ years</p>
+      <p class="muted">MBA · LEED AP · SRES</p>
+    </div>
+    <div class="footer-contact">
+      <h4>Get in touch</h4>
+      <p><span class="ic">📞</span> <a href="tel:+12069097536">(206) 909-7536</a></p>
+      <p><span class="ic">✉️</span> <a href="mailto:Adrian@AdrianWillanger.com">Adrian@AdrianWillanger.com</a></p>
+      <p><span class="ic">📍</span> Serving NE Seattle</p>
+    </div>
+    <div class="footer-fine">
+      <p class="muted small">© 2026 Adrian Willanger · Kelly Right Real Estate.<br/>
+      Data sourced from NWMLS. This page is a mockup — figures are illustrative.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============== EXIT-INTENT TEASER ============== -->
+<div class="exit-pop" id="exit-pop" hidden>
+  <button class="exit-close" aria-label="Close" onclick="document.getElementById('exit-pop').hidden=true">×</button>
+  <strong>Instant 98125 Home Value Estimate</strong>
+  <p>Curious before you commit? Get a 30-second ballpark — no email required.</p>
+  <a href="#report" class="btn btn-primary btn-sm" onclick="document.getElementById('exit-pop').hidden=true">Try it</a>
+</div>
+
+<script src="script.js"></script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
